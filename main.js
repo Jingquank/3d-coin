@@ -1,5 +1,4 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// Remove imports since we're using global THREE object
 
 // Scene setup
 const scene = new THREE.Scene();
