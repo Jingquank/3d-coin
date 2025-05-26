@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,4 +18,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: . # The folder the action should deploy
-          branch: gh-pages # The branch the action should deploy to 
+          branch: gh-pages # The branch the action should deploy to
+          clean: true # Automatically remove deleted files from the deployment 
