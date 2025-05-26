@@ -44,14 +44,14 @@ function loadSVGTexture(url) {
 async function createCoin() {
     // Load SVG textures
     const [headTexture, tailTexture] = await Promise.all([
-        loadSVGTexture('assets/coin_head.svg'),
-        loadSVGTexture('assets/coin_tail.svg'),
+        loadSVGTexture('./assets/coin_head.svg'),
+        loadSVGTexture('./assets/coin_tail.svg'),
     ]);
     headTexture.colorSpace = THREE.SRGBColorSpace;
     tailTexture.colorSpace = THREE.SRGBColorSpace;
 
     // Load flip sound
-    flipSound = new Audio('assets/flip.mp3');
+    flipSound = new Audio('./assets/flip.mp3');
     flipSound.volume = 1; // Set volume to 100%
 
     // Materials: [side, top, bottom]
